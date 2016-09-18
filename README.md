@@ -36,7 +36,7 @@ You now need to publish the `tvdb.php` config.
 php artisan vendor:publish --provider="Dawson\TVDB\TVDBServiceProvider"
 ```
 
-Now add the following environment variables to your `.env` file.
+Now add the following environment variables to your `.env` file. You can obtain your **user key** and **api key** from your account on TVDB.com
 
 ```
 TVDB_USERNAME=
