@@ -85,6 +85,50 @@ Where `$results` is a JSON response from the TVDB API. Here's an example respons
 }
 ```
 
+# Lookup
+
+Using a series ID, you can also perform a lookup to fetch further information on a series.
+
+```php
+$theWalkingDead = TVDB::lookup('153021');
+```
+
+The `lookup()` method will also return JSON. Here's an example lookup.
+
+```json
+{
+  "data": {
+    "added": "2010-03-30 01:30:16",
+    "addedBy": 76261,
+    "airsDayOfWeek": "Sunday",
+    "airsTime": "9:00 PM",
+    "aliases": [],
+    "banner": "graphical/153021-g44.jpg",
+    "firstAired": "2010-10-31",
+    "genre": [
+      "Action",
+      "Drama",
+      "Horror",
+      "Suspense"
+    ],
+    "id": 153021,
+    "imdbId": "tt1520211",
+    "lastUpdated": 1474059455,
+    "network": "AMC",
+    "networkId": "",
+    "overview": "The world we knew is gone. An epidemic of apocalyptic proportions has swept the globe causing the dead to rise and feed on the living. In a matter of months society has crumbled. In a world ruled by the dead, we are forced to finally start living. Based on a comic book series of the same name by Robert Kirkman, this AMC project focuses on the world after a zombie apocalypse. The series follows a police officer, Rick Grimes, who wakes up from a coma to find the world ravaged with zombies. Looking for his family, he and a group of survivors attempt to battle against the zombies in order to stay alive.\r\n",
+    "rating": "TV-MA",
+    "runtime": "50",
+    "seriesId": "78582",
+    "seriesName": "The Walking Dead",
+    "siteRating": 9,
+    "siteRatingCount": 1354,
+    "status": "Continuing",
+    "zap2itId": "EP01324002"
+  }
+}
+```
+
 # Questions
 
 Should you have any questions, please feel free to submit an issue.
