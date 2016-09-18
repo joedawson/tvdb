@@ -1,6 +1,6 @@
 # Laravel - TVDB Wrapper
 
-A dedicated Laravel package for the (TVDB.com)[http://tvdb.com] API.
+A dedicated Laravel package for the [http://tvdb.com](TVDB.com) API.
 
 ## Installation
 
