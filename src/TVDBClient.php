@@ -8,20 +8,15 @@ use GuzzleHttp\Handler\CurlHandler;
 use GuzzleHttp\Exception\ClientException;
 use Psr\Http\Message\RequestInterface;
 
-class TVDB
+class TVDBClient
 {
-	/**
-	 * Token for API Requests
-	 * 
-	 * @var string
-	 */
-	protected $token;
-
 	/**
 	 * Constructor
 	 */
 	public function __construct()
 	{
+		$this->token = null;
+
 		$this->username = config('tvdb.username');
 		$this->userkey 	= config('tvdb.userkey');
 		$this->apikey	= config('tvdb.apikey');
@@ -41,45 +36,11 @@ class TVDB
 	}
 
 	/**
-	 * Search TBDB for Series
-	 * 
-	 * @param  string $name
-	 * @return json
-	 */
-	public function search($name)
-	{
-		$this->login();
-
-		try {
-			return json_decode($this->client->get('search/series?name=' . $name)->getBody());
-		} catch(ClientException $e) {
-			throw new TVDBException($e);
-		}
-	}
-
-	/**	
-	 * Lookup a Series
-	 * 
-	 * @param  integer $id
-	 * @return json
-	 */
-	public function lookup($id)
-	{
-		$this->login();
-
-		try {
-			return json_decode($this->client->get('series/' . $id)->getBody());
-		} catch(ClientException $e) {
-			throw new TVDBException($e);
-		}
-	}
-
-	/**
 	 * Obtain a Token
 	 * 
 	 * @return response
 	 */
-	private function login()
+	public function login()
 	{
 		try {
 			$response = $this->client->post('login', ['json' => [
@@ -89,6 +50,8 @@ class TVDB
 			]])->getBody();
 
 			$this->token = json_decode($response->getContents())->token;
+
+			return $this;
 		} catch(ClientException $e) {
 			throw new TVDBException($e);
 		}
