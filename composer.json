@@ -1,6 +1,6 @@
 {
     "name": "dawson/tvdb",
-    "description": "A package for searching the TVDB database.",
+    "description": "A package for searching the TVDB database with Laravel.",
     "license": "MIT",
     "authors": [
         {
