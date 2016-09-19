@@ -1,6 +1,6 @@
 # Laravel - TVDB Package
 
-A dedicated Laravel package for the [TVDB.com](http://tvdb.com) API.
+A dedicated Laravel package for the [TVDB.com](http://tvdb.com) API. The documentation for this package isn't 100% at the moment as I'm still developing as I go along. So expect the documentation to improve shortly.
 
 ## Installation
 
@@ -85,15 +85,15 @@ Where `$results` is a JSON response from the TVDB API. Here's an example respons
 }
 ```
 
-# Lookup
+# Series
 
 Using a series ID, you can also perform a lookup to fetch further information on a series.
 
 ```php
-$theWalkingDead = TVDB::lookup('153021');
+$theWalkingDead = TVDB::series('153021')->get();
 ```
 
-The `lookup()` method will also return JSON. Here's an example lookup.
+The `get()` method will also return JSON. Here's an example response.
 
 ```json
 {
@@ -127,6 +127,22 @@ The `lookup()` method will also return JSON. Here's an example lookup.
     "zap2itId": "EP01324002"
   }
 }
+```
+
+### Actors
+
+You also have the ability to fetch actors from a series too.
+
+```php
+$actors = TVDB::series('153021')->actors();
+```
+
+### Episodes
+
+You can fetch a full list of episodes too.
+
+```php
+$episodes = TVDB::series('153021')->episodes();
 ```
 
 # Questions
