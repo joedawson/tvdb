@@ -1,6 +1,6 @@
 # Laravel - TVDB Package
 
-A dedicated Laravel package for the [TVDB.com](http://tvdb.com) API. The documentation for this package isn't 100% at the moment as I'm still developing as I go along. So expect the documentation to improve shortly.
+A dedicated Laravel package for the [TVDB](http://thetvdb.com/) API. The documentation for this package isn't 100% at the moment as I'm still developing as I go along. So expect the documentation to improve shortly.
 
 ## Installation
 
@@ -36,7 +36,7 @@ You now need to publish the `tvdb.php` config.
 php artisan vendor:publish --provider="Dawson\TVDB\TVDBServiceProvider"
 ```
 
-Now add the following environment variables to your `.env` file. You can obtain your **user key** and **api key** from your account on TVDB.com
+Now add the following environment variables to your `.env` file. You can obtain your **user key** and **api key** from your account on TVDB
 
 ```
 TVDB_USERNAME=
