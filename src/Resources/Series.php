@@ -75,5 +75,34 @@ class Series extends TVDB
 		} catch(ClientException $e) {
 			throw new TVDBException($e);
 		}
-	}
+    }
+    /**
+     * Series Wallpapers
+     *
+     * @return json
+     */
+    public function wallpapers()
+    {
+            try {
+                    return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=fanart')->getBody());
+            } catch(ClientException $e) {
+                    throw new TVDBException($e);
+            }
+    }
+
+    /**
+     * Series Posters
+     * 
+     * @return json
+     */
+
+    public function posters()
+    {
+            try {
+                    return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=poster')->getBody());
+            } catch(ClientException $e) {
+                    throw new TVDBException($e);
+            }
+    }
+
 }
