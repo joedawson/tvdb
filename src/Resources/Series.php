@@ -71,7 +71,7 @@ class Series extends TVDB
     public function images()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images')->getBody());
+            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query')->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
