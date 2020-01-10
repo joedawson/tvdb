@@ -11,6 +11,11 @@ use Psr\Http\Message\RequestInterface;
 class TVDBClient
 {
     /**
+     * Token for Handling Requests
+     */
+    protected $token;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -38,7 +43,7 @@ class TVDBClient
     /**
      * Obtain a Token
      * 
-     * @return response
+     * @return mixed
      */
     public function login()
     {

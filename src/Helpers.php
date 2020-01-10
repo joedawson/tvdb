@@ -7,7 +7,7 @@ trait Helpers
     /** 
      * Client
      * 
-     * @return TVDBClient
+     * @return \Dawson\TVDB\TVDBClient
      */
     function client()
     {

@@ -11,7 +11,7 @@ class TVDB
     /**
      * Series Resource
      * 
-     * @param  integer $id
+     * @param  integer $id TVDB Series ID.
      * @return \Dawson\TVDB\Resoures\Series
      */
     public function series($id)
@@ -22,8 +22,8 @@ class TVDB
     /**
      * Search TBDB for Series
      * 
-     * @param  string $name
-     * @return json
+     * @param  string $name Name of TV Series to search for.
+     * @return mixed
      */
     public function search($name)
     {
