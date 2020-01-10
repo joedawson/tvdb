@@ -20,6 +20,17 @@ class TVDB
     }
 
     /**
+     * Episodes Resource
+     * 
+     * @param  integer $id TVDB Episode ID.
+     * @return \Dawson\TVDB\Resoures\Episodes
+     */
+    public function episodes($id)
+    {
+        return new Resources\Episodes($id);
+    }
+
+    /**
      * Search TVDB for Series
      * 
      * @param  string $name Name of TV Series to search for.
