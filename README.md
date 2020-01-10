@@ -4,29 +4,12 @@ A dedicated Laravel package for the [TVDB](http://thetvdb.com/) API. The documen
 
 ## Installation
 
-To install, use the following to pull the package in via Composer.
+To install, use the following to pull the package in via Composer and automatically register the Service Provider.
 
 ```
 composer require dawson/tvdb
 ```
 
-Now register the Service provider in `config/app.php`
-
-```php
-'providers' => [
-	...
-	Dawson\TVDB\TVDBServiceProvider::class,
-],
-```
-
-And also add the alias to the same file.
-
-```php
-'aliases' => [
-	...
-	'TVDB' => Dawson\TVDB\TVDBFacade::class,
-],
-```
 
 ## Configuration
 
