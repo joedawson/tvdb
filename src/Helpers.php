@@ -4,13 +4,13 @@ namespace Dawson\TVDB;
 
 trait Helpers
 {
-	/**	
-	 * Client
-	 * 
-	 * @return TVDBClient
-	 */
-	function client()
-	{
-		return new TVDBClient;
-	}
+    /** 
+     * Client
+     * 
+     * @return TVDBClient
+     */
+    function client()
+    {
+        return new TVDBClient;
+    }
 }
