@@ -11,7 +11,7 @@ class Series extends TVDB
      *
      * @var integer
      */
-    public $id;
+    protected $id;
 
     /**
      * Constructor
@@ -29,7 +29,9 @@ class Series extends TVDB
     public function get()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id)->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
@@ -43,7 +45,9 @@ class Series extends TVDB
     public function actors()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/actors')->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id . '/actors'
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
@@ -57,7 +61,9 @@ class Series extends TVDB
     public function episodes()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/episodes')->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id . '/episodes'
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
@@ -71,7 +77,9 @@ class Series extends TVDB
     public function images()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query')->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id . '/images/query'
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
@@ -84,7 +92,9 @@ class Series extends TVDB
     public function wallpapers()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=fanart')->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=fanart'
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
@@ -99,7 +109,9 @@ class Series extends TVDB
     public function posters()
     {
         try {
-            return json_decode($this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=poster')->getBody());
+            return json_decode(
+                $this->client()->login()->client->get('series/' . $this->id . '/images/query?keyType=poster'
+            )->getBody());
         } catch (ClientException $e) {
             throw new TVDBException($e);
         }
