@@ -25,9 +25,9 @@ class TVDB
      * @param  integer $id TVDB Episode ID.
      * @return \Dawson\TVDB\Resoures\Episodes
      */
-    public function episodes($id)
+    public function episode($id)
     {
-        return new Resources\Episodes($id);
+        return new Resources\Episode($id);
     }
 
     /**

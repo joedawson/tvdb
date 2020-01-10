@@ -4,7 +4,7 @@ namespace Dawson\TVDB\Resources;
 
 use Dawson\TVDB\TVDB;
 
-class Episodes extends TVDB
+class Episode extends TVDB
 {
     /**
      * Episode ID
