@@ -20,7 +20,7 @@ class TVDB
     }
 
     /**
-     * Search TBDB for Series
+     * Search TVDB for Series
      * 
      * @param  string $name Name of TV Series to search for.
      * @return mixed

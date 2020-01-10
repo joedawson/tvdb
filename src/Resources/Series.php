@@ -24,7 +24,7 @@ class Series extends TVDB
     /**
      * Get the Series
      *
-     * @return json
+     * @return mixed
      */
     public function get()
     {
@@ -38,7 +38,7 @@ class Series extends TVDB
     /**
      * Series Actors
      *
-     * @return json
+     * @return mixed
      */
     public function actors()
     {
@@ -52,7 +52,7 @@ class Series extends TVDB
     /**
      * Series Episodes
      *
-     * @return json
+     * @return mixed
      */
     public function episodes()
     {
@@ -66,7 +66,7 @@ class Series extends TVDB
     /**
      * Series Images
      *
-     * @return json
+     * @return mixed
      */
     public function images()
     {
@@ -79,7 +79,7 @@ class Series extends TVDB
     /**
      * Series Wallpapers
      *
-     * @return json
+     * @return mixed
      */
     public function wallpapers()
     {
@@ -93,7 +93,7 @@ class Series extends TVDB
     /**
      * Series Posters
      *
-     * @return json
+     * @return mixed
      */
 
     public function posters()
